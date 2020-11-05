@@ -5,10 +5,8 @@ class PostsController < ApplicationController
   end
 
   def create
-
-    post = Post.create(content: params[:content], checked: false)
+    Post.create(content: params[:content], checked: false)
     render json:{ post: post }
-
   end
 
   def checked
